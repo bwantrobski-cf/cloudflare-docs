@@ -19,8 +19,8 @@ import { PackageManagers, TypeScriptExample } from "~/components";
 
 The harness owns its storage, so you install only the harness:
 
-- Each session's transcript is stored as AI SDK `UIMessage` objects, in the same tables the [`Sessions`](/agents/capabilities/#sessions) capability uses.
-- Model output is stored while it streams, in the same tables the [`Streams`](/agents/capabilities/#streams) capability uses.
+- Each session's transcript is stored as AI SDK `UIMessage` objects, in the same tables the [`Sessions`](/agents/capabilities/sessions/) capability uses.
+- Model output is stored while it streams, in the same tables the [`Streams`](/agents/capabilities/streams/) capability uses.
 - One Lifecycle job per session wakes the object after an eviction and continues the turn.
 
 ## Install
@@ -137,7 +137,7 @@ Input submitted with `source: "client"` is untrusted. It may only add `user` mes
 
 ## Serve `useAgentChat`
 
-`ThinkChat` serves one session over Think's chat WebSocket protocol, so the [`useAgentChat`](/agents/agent-class/communication-channels/chat/client-sdk/) React hook works unchanged. Install it with the [`WebSockets`](/agents/capabilities/#websockets) capability:
+`ThinkChat` serves one session over Think's chat WebSocket protocol, so the [`useAgentChat`](/agents/agent-class/communication-channels/chat/client-sdk/) React hook works unchanged. Install it with the [`WebSockets`](/agents/capabilities/websockets/) capability:
 
 ```ts
 import { ThinkChat, ThinkHarness } from "agents/harness/think";
